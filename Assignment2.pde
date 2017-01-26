@@ -7,7 +7,7 @@ void setup()
 //First flower code
 void draw()
 {
-  Eflower eflower1  = new Eflower(width/2, height/2);
+  Eflower eflower1  = new Eflower(width/10, height/10);
   eflower1.render();
   
 }
