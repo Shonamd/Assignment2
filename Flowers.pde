@@ -1,8 +1,8 @@
-class Energy
+class Eflower
 {
   PShape eflower;
   
-  Energy(float x, float y)
+  Eflower(float x, float y)
   {
     energycreate();
   }
@@ -32,16 +32,14 @@ class Energy
     eflower.addChild(reye) ;
     eflower.addChild(stalk) ;
     eflower.addChild(root);
-    
-    shape(eflower);
-    
+   
   }
   
   void render()
   {
     pushMatrix();
     translate(width/2, height/2) ;
-    shape(eflower, 0, 0);
+    shape(eflower); 
     popMatrix();
   }
 }
