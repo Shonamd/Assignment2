@@ -41,7 +41,7 @@ class Eflower
    
   }
   
-  void render()
+  void erender()
   {
     pushMatrix();
     translate(xpos, ypos) ;
@@ -67,6 +67,31 @@ class Battleflower
   
   void bcreate()
   {
-    battleflower
+    battleflower = createShape(GROUP);
+    strokeWeight(2);
+    stroke(0);
+    fill(255, 124, 207);
+    PShape main = createShape(ELLIPSE, 0, 0, width/30, width/30);
+    PShape petal1 = createShape(ELLIPSE, width/100, 0, width/30, width/30);
+    PShape petal2 = createShape(ELLIPSE, width/100, width/100, width/30, width/30);
+    PShape petal3 = createShape(ELLIPSE, -width/100, width/100, width/30, width/30);
+    PShape petal4 = createShape(ELLIPSE, -width/100, -width/100, width/30, width/30);
+    fill(34, 237, 17);
+    PShape stalk = createShape(LINE, 0, width/100+ width/60, height/30*2, height/2); 
+ 
+    battleflower.addChild(main);
+    battleflower.addChild(petal1);
+    battleflower.addChild(petal2);
+    battleflower.addChild(petal3);
+    battleflower.addChild(petal4);
+    battleflower.addChild(stalk);
+  }
+  
+  void brender()
+  {
+    pushMatrix();
+    translate(xpos, ypos) ;
+    shape(battleflower); 
+    popMatrix();
   }
 }

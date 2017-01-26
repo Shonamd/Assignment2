@@ -8,6 +8,9 @@ void setup()
 void draw()
 {
   Eflower eflower1  = new Eflower(width/10, height/10);
-  eflower1.render();
+  eflower1.erender();
+  
+  Battleflower battleflower1 = new Battleflower(width/10*3, height/10) ;
+  battleflower1.brender();
 }
   
