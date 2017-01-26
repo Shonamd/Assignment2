@@ -10,11 +10,11 @@ class Eflower
     xpos = x ;
     ypos = y ;
     
-    energycreate();
+    ecreate();
   }
 
 
-  void energycreate()
+  void ecreate()
   {
     eflower = createShape(GROUP);
     strokeWeight(2);
@@ -47,5 +47,26 @@ class Eflower
     translate(xpos, ypos) ;
     shape(eflower); 
     popMatrix();
+  }
+}
+
+class Battleflower
+{
+  PShape battleflower;
+  
+  float xpos ;
+  float ypos ;
+  
+  Battleflower(float x, float y)
+  {
+    xpos = x ;
+    ypos = y ;
+    
+    bcreate();
+  }
+  
+  void bcreate()
+  {
+    battleflower
   }
 }
