@@ -76,8 +76,8 @@ class Battleflower
     PShape petal2 = createShape(ELLIPSE, width/100, width/100, width/30, width/30);
     PShape petal3 = createShape(ELLIPSE, -width/100, width/100, width/30, width/30);
     PShape petal4 = createShape(ELLIPSE, -width/100, -width/100, width/30, width/30);
-    fill(34, 237, 17);
-    PShape stalk = createShape(LINE, 0, width/100+ width/60, height/30*2, height/2); 
+    stroke(34, 237, 17);
+    PShape stalk = createShape(LINE, 0, width/100+ width/60, 0, width/100*5); 
  
     battleflower.addChild(main);
     battleflower.addChild(petal1);
