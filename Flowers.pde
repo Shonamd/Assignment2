@@ -78,6 +78,7 @@ class Battleflower
     PShape petal4 = createShape(ELLIPSE, -width/100, -width/100, width/30, width/30);
     stroke(34, 237, 17);
     PShape stalk = createShape(LINE, 0, width/100+ width/60, 0, width/100*5); 
+    PShape leaves = createShape(LINE, -width/100, width/100+ width/60, width/100, width/100+ width/60);
  
     battleflower.addChild(main);
     battleflower.addChild(petal1);
@@ -85,6 +86,7 @@ class Battleflower
     battleflower.addChild(petal3);
     battleflower.addChild(petal4);
     battleflower.addChild(stalk);
+    battleflower.addChild(leaves);
   }
   
   void brender()
