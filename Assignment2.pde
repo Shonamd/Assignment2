@@ -23,7 +23,10 @@ void draw()
   
   fill(250, 246, 126);
   
-  ellipse(wsize*2, hsize*4.5, wsize, wsize/2);
+  for (int i=1 ; i < 5 ; i++)
+  {
+    ellipse(wsize*2*i , hsize*4.8, wsize, wsize/2);
+  }
   
   for(int j=1 ; j<9 ; j ++)
   {
@@ -41,5 +44,9 @@ void draw()
       c++ ;
     }
   }
+  
+  stroke(34, 237, 17);
+  noFill();
+  rect(10, 10, wsize*3.5, hsize*.8);
 }
   
