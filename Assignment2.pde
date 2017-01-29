@@ -18,8 +18,12 @@ void draw()
   stroke(0);
   
   int c = 1;
-  int wsize = width/10 ;
-  int hsize = height/5 ;
+  float wsize = width/10 ;
+  float hsize = height/5 ;
+  
+  fill(250, 246, 126);
+  
+  ellipse(wsize*2, hsize*4.5, wsize, wsize/2);
   
   for(int j=1 ; j<9 ; j ++)
   {
