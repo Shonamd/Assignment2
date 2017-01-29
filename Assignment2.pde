@@ -12,5 +12,9 @@ void draw()
   
   Battleflower battleflower1 = new Battleflower(width/10*3, height/10) ;
   battleflower1.brender();
+  
+  fill(78,152,29);
+  stroke(0);
+  rect(width/10, height/5, width/10*8, height/5*4);
 }
   
