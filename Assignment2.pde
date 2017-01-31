@@ -3,6 +3,10 @@ void setup()
   size(900, 600);
   background(0);
   
+  PFont maint ;
+  maint = loadFont("BodoniMT-Italic.vlw");
+  textFont(maint);
+  
   Eflower eflower1  = new Eflower(width/10, height/10);
   eflower1.erender();
   
