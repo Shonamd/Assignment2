@@ -3,9 +3,8 @@ void setup()
   size(900, 600);
   background(0);
   
-  PFont maint ;
   maint = loadFont("BookAntiqua-20.vlw");
-  textFont(maint);
+  tscore = loadFont("BookAntiqua-25.vlw");
   
   Eflower eflower1  = new Eflower(width/10, height/10);
   eflower1.erender();
@@ -14,6 +13,9 @@ void setup()
   battleflower1.brender();
 }
 
+ PFont maint ;
+ PFont tscore ; 
+  
 //First flower code
 void draw()
 {
@@ -51,9 +53,15 @@ void draw()
   
   stroke(34, 237, 17);
   noFill();
+  
   rect(10, 10, wsize*3.5, hsize*.85);
-  rect(width/5*3, 10, wsize*3.5, hsize*.85);
+  textFont(maint);
   text("Energy", width/15, 30);
   text("Damage", width/15*4, 30);
+  
+  rect(width/5*3, 10, wsize*3.5, hsize*.85);
+  textFont(tscore);
+  text("Score:", wsize*6.4, hsize*.3);
+  text("Points:", wsize*6.4, hsize*.7);
 }
   
