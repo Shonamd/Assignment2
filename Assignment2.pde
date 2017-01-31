@@ -54,5 +54,6 @@ void draw()
   rect(10, 10, wsize*3.5, hsize*.85);
   rect(width/5*3, 10, wsize*3.5, hsize*.85);
   text("Energy", width/15, 30);
+  text("Damage", width/15*4, 30);
 }
   
