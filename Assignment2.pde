@@ -47,6 +47,8 @@ void draw()
   
   stroke(34, 237, 17);
   noFill();
-  rect(10, 10, wsize*3.5, hsize*.8);
+  rect(10, 10, wsize*3.5, hsize*.85);
+  rect(width/5*3, 10, wsize*3.5, hsize*.85);
+  //text
 }
   
