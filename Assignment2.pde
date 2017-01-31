@@ -4,7 +4,7 @@ void setup()
   background(0);
   
   PFont maint ;
-  maint = loadFont("BodoniMT-Italic.vlw");
+  maint = loadFont("BookAntiqua-20.vlw");
   textFont(maint);
   
   Eflower eflower1  = new Eflower(width/10, height/10);
@@ -53,6 +53,6 @@ void draw()
   noFill();
   rect(10, 10, wsize*3.5, hsize*.85);
   rect(width/5*3, 10, wsize*3.5, hsize*.85);
-  //text
+  text("Energy", width/15, 30);
 }
   
