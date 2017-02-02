@@ -1,15 +1,19 @@
 int score = 0 ;
-int energy = 0;
+int energy = 30;
+boolean add_eflower = false ;
+boolean add_bflower = false ;
+int bcount ;
+int ecount ;
 
 void Game_screen()
 { 
   background(0);
   fill(78,152,29);
   stroke(0);
-  
-  int c = 1;
   float wsize = width/10 ;
   float hsize = height/5 ;
+  
+  int c = 1;
   
   fill(250, 246, 126);
   
@@ -50,12 +54,43 @@ void Game_screen()
   text(score, wsize*8.5, hsize*.3);
   text(energy, wsize*8.5, hsize*.7);
   
+}
+
+void add_flowers()
+{
   if (mousePressed == true)
   {
-    if (dist(mouseX, mouseY, width/10, height/10) < width/10)
+    if (dist(mouseX, mouseY, width/10, height/10) < height/10)
     {
-      println(score);
-      score++ ;
+      if(energy > 20)
+      {
+        add_eflower = true ;
+        bcount ++ ;
+      }
+    }
+    
+    if (dist(mouseX, mouseY, width/10*3, height/10) < height/10)
+    {
+      add_bflower = true ;
     }
   }
+  
+  if( add_eflower == true)
+  {
+    if(bcount < 5)
+    {
+      eadded();
+    }
+    
+    add_eflower = false ;
+  }
+    
+}
+
+void eadded()
+{
+  Eflower eflowers = eflower.get(bcount);
+  eflowers.erender();
+  bcount ++ ;
+  energy = energy - 20 ;
 }
