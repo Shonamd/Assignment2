@@ -50,14 +50,14 @@ class Eflower
   }
 }
 
-class Battleflower
+class Bflower
 {
   PShape battleflower;
   
   float xpos ;
   float ypos ;
   
-  Battleflower(float x, float y)
+  Bflower(float x, float y)
   {
     xpos = x ;
     ypos = y ;

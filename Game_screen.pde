@@ -65,32 +65,36 @@ void add_flowers()
       if(energy > 20)
       {
         add_eflower = true ;
-        bcount ++ ;
+        ecount ++ ;
       }
     }
     
     if (dist(mouseX, mouseY, width/10*3, height/10) < height/10)
     {
-      add_bflower = true ;
+      if(energy > 30)
+      {
+        add_bflower = true ;
+        bcount ++ ;
+      }
     }
   }
   
   if( add_eflower == true)
   {
-    if(bcount < 5)
+    if(ecount < 5)
     {
-      eadded();
+      Eflower eflowers = eflower.get(ecount);
+      eflowers.erender();
+      energy = energy - 20 ;
     }
     
     add_eflower = false ;
   }
+  
+  if( add_bflower == true)
+  {
+    if(bcount < 6)
+    {
+      
     
-}
-
-void eadded()
-{
-  Eflower eflowers = eflower.get(bcount);
-  eflowers.erender();
-  bcount ++ ;
-  energy = energy - 20 ;
 }

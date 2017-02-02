@@ -12,9 +12,12 @@ void setup()
   eflower.add(new Eflower(width/10*2*3 , height/5*4.5));
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   
+  bflowe.add(new Bflower(width/
+  
 }
 
 ArrayList<Eflower> eflower = new ArrayList<Eflower>();
+ArrayList<Bflower> bflower = new ArrayList<Bflower>();
 
 PFont maint ;
 PFont tscore ; 
