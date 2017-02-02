@@ -30,11 +30,28 @@ void draw()
   Game_screen() ;
   add_flowers();
   
-  if(eflower1 == true)
+  if(eflower2 == true)
   {
       Eflower eflowers = eflower.get(1);
       eflowers.erender();
-      energy = energy - 20 ;
+  }
+  
+  if(eflower3 == true)
+  {
+      Eflower eflowers = eflower.get(2);
+      eflowers.erender();
+  }
+  
+  if(eflower4 == true)
+  {
+      Eflower eflowers = eflower.get(3);
+      eflowers.erender();
+  }
+  
+  if(eflower5 == true)
+  {
+      Eflower eflowers = eflower.get(4);
+      eflowers.erender();
   }
   
   Eflower eflower1  = new Eflower(width/10, height/10);
@@ -43,6 +60,9 @@ void draw()
   Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
   battleflower1.brender();
   
-  
+  if(frameCount % 100 == 0)
+  {
+    energy ++ ;
+  }
 }
   

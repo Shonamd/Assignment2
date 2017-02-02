@@ -83,9 +83,25 @@ void add_flowers()
   {
     if(ecount == 1)
     {
-      eflower1 = true ;
+      eflower2 = true ;
+    }
+   
+    if(ecount == 2)
+    {
+      eflower3 = true ;
     }
     
+    if(ecount == 3)
+    {
+      eflower4 = true ;
+    }
+    
+    if(ecount == 4)
+    {
+      eflower5 = true ;
+    }
+    
+    energy = energy - 20 ;
     add_eflower = false ;
   }
   
