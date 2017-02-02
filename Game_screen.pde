@@ -1,17 +1,13 @@
+int score = 0 ;
+int energy = 0;
+
 void Game_screen()
-{
-  Eflower eflower1  = new Eflower(width/10, height/10);
-  eflower1.erender();
-  
-  Battleflower battleflower1 = new Battleflower(width/10*3, height/10) ;
-  battleflower1.brender();
-  
+{ 
+  background(0);
   fill(78,152,29);
   stroke(0);
   
   int c = 1;
-  int score = 0 ;
-  int energy = 0;
   float wsize = width/10 ;
   float hsize = height/5 ;
   
@@ -53,4 +49,13 @@ void Game_screen()
   text("Energy:", wsize*6.4, hsize*.7);
   text(score, wsize*8.5, hsize*.3);
   text(energy, wsize*8.5, hsize*.7);
+  
+  if (mousePressed == true)
+  {
+    if (dist(mouseX, mouseY, width/10, height/10) < width/10)
+    {
+      println(score);
+      score++ ;
+    }
+  }
 }
