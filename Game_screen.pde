@@ -81,11 +81,9 @@ void add_flowers()
   
   if( add_eflower == true)
   {
-    if(ecount < 5)
+    if(ecount == 1)
     {
-      Eflower eflowers = eflower.get(ecount);
-      eflowers.erender();
-      energy = energy - 20 ;
+      eflower1 = true ;
     }
     
     add_eflower = false ;
@@ -95,6 +93,7 @@ void add_flowers()
   {
     if(bcount < 6)
     {
-      
+    }
+  }
     
 }
