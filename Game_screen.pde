@@ -2,8 +2,8 @@ int score = 0 ;
 int energy = 30;
 boolean add_eflower = false ;
 boolean add_bflower = false ;
-int bcount ;
-int ecount ;
+int bcount = 0;
+int ecount = 0;
 
 void Game_screen()
 { 
@@ -107,9 +107,38 @@ void add_flowers()
   
   if( add_bflower == true)
   {
-    if(bcount < 6)
+    if(bcount == 1)
     {
+      bflower2 = true ;
     }
+    
+    if(bcount == 2)
+    {
+      bflower3 = true ;
+    }
+    
+    if(bcount == 3)
+    {
+      bflower4 = true ;
+    }
+    
+    if(bcount == 4)
+    {
+      bflower5 = true ;
+    }
+    
+    if(bcount == 5)
+    {
+      bflower6 = true ;
+    }
+    
+    if(bcount == 6)
+    {
+      bflower7 = true ;
+    }
+    
+    add_bflower = false ;
+    energy = energy - 30 ;
   }
     
 }

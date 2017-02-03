@@ -1,4 +1,5 @@
 boolean eflower1, eflower2, eflower3, eflower4, eflower5 = false ;
+boolean bflower1, bflower2, bflower3, bflower4, bflower5, bflower6, bflower7 = false ;
 
 void setup()
 {
@@ -14,7 +15,13 @@ void setup()
   eflower.add(new Eflower(width/10*2*3 , height/5*4.5));
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   
-  //bflower.add(new Bflower(width/
+  bflower.add(new Bflower(width/10*3, height/10));
+  bflower.add(new Bflower(width/10*1.5, height/5*1.5));
+  bflower.add(new Bflower(width/10*1.5, height/5*2.5));
+  bflower.add(new Bflower(width/10*1.5, height/5*3.5));
+  bflower.add(new Bflower(width/10*2.5, height/5*1.5));
+  bflower.add(new Bflower(width/10*2.5, height/5*2.5));
+  bflower.add(new Bflower(width/10*2.5, height/5*3.5));
   
 }
 
@@ -52,6 +59,18 @@ void draw()
   {
       Eflower eflowers = eflower.get(4);
       eflowers.erender();
+  }
+  
+  if(bflower2 == true)
+  {
+    Bflower bflowers = bflower.get(1) ;
+    bflowers.brender();
+  }
+  
+  if(bflower3 == true)
+  {
+    Bflower bflowers = bflower.get(2) ;
+    bflowers.brender();
   }
   
   Eflower eflower1  = new Eflower(width/10, height/10);
