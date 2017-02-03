@@ -74,34 +74,38 @@ void add_flowers()
       if(energy > 30)
       {
         add_bflower = true ;
-        bcount ++ ;
+        println("1");
+        //bcount ++ ;
       }
     }
   }
   
-  if( add_eflower == true)
+  /*if( add_eflower == true)
   {
     if(ecount == 1)
     {
       eflower2 = true ;
+      energy = energy - 20 ;
     }
    
     if(ecount == 2)
     {
       eflower3 = true ;
+      energy = energy - 20 ;  
     }
     
     if(ecount == 3)
     {
       eflower4 = true ;
+      energy = energy - 20 ;
     }
     
     if(ecount == 4)
     {
       eflower5 = true ;
+      energy = energy - 20 ;
     }
     
-    energy = energy - 20 ;
     add_eflower = false ;
   }
   
@@ -110,35 +114,40 @@ void add_flowers()
     if(bcount == 1)
     {
       bflower2 = true ;
+      energy = energy - 30 ;
     }
     
     if(bcount == 2)
     {
       bflower3 = true ;
+      energy = energy - 30 ;
     }
     
     if(bcount == 3)
     {
       bflower4 = true ;
+      energy = energy - 30 ;
     }
     
     if(bcount == 4)
     {
       bflower5 = true ;
+      energy = energy - 30 ;
     }
     
     if(bcount == 5)
     {
       bflower6 = true ;
+      energy = energy - 30 ;
     }
     
     if(bcount == 6)
     {
       bflower7 = true ;
+      energy = energy - 30 ;
     }
     
     add_bflower = false ;
-    energy = energy - 30 ;
-  }
+  }*/
     
 }
