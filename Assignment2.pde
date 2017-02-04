@@ -15,6 +15,8 @@ void setup()
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   
   bflower.add(new Bflower(width/10*3, height/10));
+  
+  bug.add(new Bug(width/2, height/2));
  /* bflower.add(new Bflower(width/10*1.5, height/5*1.5));
   bflower.add(new Bflower(width/10*1.5, height/5*2.5));
   bflower.add(new Bflower(width/10*1.5, height/5*3.5));
@@ -27,6 +29,7 @@ void setup()
 
 ArrayList<Eflower> eflower = new ArrayList<Eflower>();
 ArrayList<Bflower> bflower = new ArrayList<Bflower>();
+ArrayList<Bug> bug = new ArrayList<Bug>();
 
 int[][] full = new int[8][3];
 
@@ -96,6 +99,9 @@ void draw()
       }
     }
   }
+  
+  Bug tempbug = bug.get(0) ;
+  tempbug.bug_render();
       
    
   /*if(eflower2 == true)

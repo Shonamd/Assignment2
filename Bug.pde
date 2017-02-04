@@ -1,4 +1,4 @@
-/*ArrayList<Bug> bug = new ArrayList<Bug>();
+
 
 class Bug
 {
@@ -33,4 +33,4 @@ class Bug
     shape(bug);
     popMatrix();
   }
-*/
+}
