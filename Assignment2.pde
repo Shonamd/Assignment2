@@ -14,8 +14,8 @@ void setup()
   eflower.add(new Eflower(width/10*2*3 , height/5*4.5));
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   
- /* bflower.add(new Bflower(width/10*3, height/10));
-  bflower.add(new Bflower(width/10*1.5, height/5*1.5));
+  bflower.add(new Bflower(width/10*3, height/10));
+ /* bflower.add(new Bflower(width/10*1.5, height/5*1.5));
   bflower.add(new Bflower(width/10*1.5, height/5*2.5));
   bflower.add(new Bflower(width/10*1.5, height/5*3.5));
   bflower.add(new Bflower(width/10*2.5, height/5*1.5));
@@ -40,6 +40,9 @@ void draw()
   Game_screen() ;
   //add_flowers();
   
+  Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
+  battleflower1.brender();
+  
   if (mousePressed == true)
   {
     if (dist(mouseX, mouseY, width/10, height/10) < height/10)
@@ -61,7 +64,7 @@ void draw()
     }
   }
   
-  for(int i = 0 ; i < bflower.size() ; i++)
+  for(int i = 1 ; i < bflower.size() ; i++)
   {
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
