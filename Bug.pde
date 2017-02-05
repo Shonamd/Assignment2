@@ -22,12 +22,14 @@ class Bug
     stroke(180, 78, 31);
     fill(180, 78, 31) ;
     PShape main = createShape(ELLIPSE, 0, 0, height/10, width/30) ;
-    PShape antena1 = createShape(LINE, 0, 0, (-height/10),(0-width/100)) ; 
+    PShape antena1 = createShape(LINE, 0, 0, (-height/10),(-width/100)) ; 
     PShape antena2 = createShape(LINE, 0, 0, (-height/10), (width/100)); 
+    PShape leg1 = createShape(LINE, 0, 0, (-height/30), (-width/50));
     
     bug.addChild(main);
     bug.addChild(antena1);
     bug.addChild(antena2);
+    bug.addChild(leg1);
   }
   
   void bug_render()
