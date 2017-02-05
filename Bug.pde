@@ -1,16 +1,17 @@
-
-
 class Bug
 {
   PShape bug ;
-  
-  float xpos ;
-  float ypos ;
+  PVector pos;
+  //float xpos ;
+  float midY;
+  float theta;
   
   Bug(float x, float y)
   {
-    xpos = x ;
-    ypos = y ;
+    pos = new PVector();
+    pos.x = x;
+    midY = y;
+    //pos.y = y ;
     
     bug_create();
   }
@@ -46,8 +47,22 @@ class Bug
   void bug_render()
   {
     pushMatrix();
-    translate(xpos, ypos);
+    translate(pos.x, pos.y);
     shape(bug);
     popMatrix();
+  }
+  
+  void update_bug()
+  {
+    theta = theta + radians(0.5);
+    pos.x = pos.x - 0.5;
+    pos.y = midY + sin(theta) * ((height/5)*0.25);
+    
+    //////////////////
+    if(pos.x < 0)
+    {
+      pos.x = width;
+    }
+    ////////////////
   }
 }
