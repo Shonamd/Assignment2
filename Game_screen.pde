@@ -111,6 +111,11 @@ void flowers()
     }
   }
   
+  /*if( frameCount % 600 == 0)
+  {
+    
+  }*/
+  
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();
   tempbug.update_bug();
@@ -119,4 +124,5 @@ void flowers()
   {
     energy ++ ;
   }
+  
 }
