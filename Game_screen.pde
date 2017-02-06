@@ -119,7 +119,7 @@ void flowers()
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();
   tempbug.update_bug();
-      
+        
   if(frameCount % 60 == 0)
   {
     energy ++ ;

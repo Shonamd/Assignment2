@@ -1,28 +1,21 @@
-PShape sun ;
+PShape suns ;
+
 class Sun extends Eflower
 { 
   Sun (float xpos, float ypos)
   {
     super(xpos, ypos);
-    sun_create();
+    this.xpos = xpos;
+    this.ypos = ypos;
   }
-  
-  void sun_create()
-  {
-    sun = createShape() ;
-    fill(234, 250, 23);
-    ellipse(xpos +50, ypos + 50, 20, 20);
-  } 
   
   void srender()
   {
     pushMatrix();
+    fill(234, 250, 23);
+    ellipse(0, -50, 20, 20);
     translate(xpos, ypos);
-    shape(sun);
+    shape(suns);
     popMatrix();
   }
-}
-  
-  
-
 }
