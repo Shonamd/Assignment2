@@ -2,7 +2,6 @@ class Bug
 {
   PShape bug ;
   PVector pos;
-  //float xpos ;
   float midY;
   float theta;
   
@@ -53,6 +52,7 @@ class Bug
   
   void update_bug()
   {
+    //Makes the bug attack in a sin wave pattern
     theta = theta + radians(0.5);
     pos.x = pos.x - 0.5;
     pos.y = midY + sin(theta) * ((height/5)*0.25);

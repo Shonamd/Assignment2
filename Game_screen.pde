@@ -13,13 +13,13 @@ void Game_screen()
   
   int c = 1;
   
-  fill(250, 246, 126);
-  
+  //Creates the spotlights for the energy flowers
+  fill(250, 246, 126);  
   for (int i=1 ; i < 5 ; i++)
   {
     ellipse(wsize*2*i , hsize*4.8, wsize, wsize/2);
   }
-  
+  //Creates the grid
   for(int j=1 ; j<9 ; j ++)
   {
     for (int i=1 ; i<4 ; i++)
@@ -36,15 +36,14 @@ void Game_screen()
       c++ ;
     }
   }
-  
+  //Creates the box and info that holds the flowers
   stroke(34, 237, 17);
   noFill();
-  
   rect(10, 10, wsize*3.5, hsize*.85);
   textFont(maint);
   text("Energy", width/15, 30);
   text("Damage", width/15*4, 30);
-  
+  //Shows the current score and level of energy availible
   rect(width/5*3, 10, wsize*3.5, hsize*.85);
   textFont(tscore);
   text("Score:", wsize*6.4, hsize*.3);
@@ -75,7 +74,6 @@ void flowers()
       if(energy > 30)
       {
         add_bflower = true ;
-        //bcount ++ ;
       }
     }
   }
