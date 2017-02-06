@@ -102,4 +102,9 @@ class Bflower
     shape(battleflower); 
     popMatrix();
   }
+  
+  void bupdate()
+  {
+    bullet.add(new Bullet(xpos, ypos));
+  }
 }

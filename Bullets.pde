@@ -11,6 +11,20 @@ class Bullet extends Bflower
     create_bullets();
   }
   
+  void create_bullets()
+  {
+    pushMatrix();
+    translate(pos.x, pos.y);
+    fill(250, 13, 48);
+    strokeWeight(1.5);
+    stroke(0);
+    popMatrix();
+  }
+  
+  void update_bullets()
+  {
+    pos.x = pos.x + 2 ;
+  }
 }
 
 void keyPressed()

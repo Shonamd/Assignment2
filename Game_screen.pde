@@ -93,6 +93,7 @@ void flowers()
   {
     Eflower temp = eflower.get(i) ;
     temp.erender() ;
+    
     if( frameCount % 300 == 0)
     {
       temp.eupdate();
@@ -124,15 +125,19 @@ void flowers()
   {
     Sun tempsun = sun.get(i) ;
     tempsun.srender() ;
-  }
-  
-  for(int i = 0 ; i < sun.size()-1 ; i++)
-  {
-    Sun tempsun = sun.get(i) ;
+    
     if(frameCount % 80 == 0)
     {
       tempsun.sremove();
     }
+  }
+  
+  
+  
+  for(int i = 0 ; i < bullet.size()-1 ; i++)
+  {
+    Bullet tempbullet = bullet.get(i) ;
+    tempbullet.update_bullets();
   }
   
   Bug tempbug = bug.get(0) ;

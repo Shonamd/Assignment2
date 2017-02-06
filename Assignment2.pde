@@ -23,6 +23,7 @@ ArrayList<Eflower> eflower = new ArrayList<Eflower>();
 ArrayList<Bflower> bflower = new ArrayList<Bflower>();
 ArrayList<Bug> bug = new ArrayList<Bug>();
 ArrayList<Sun> sun = new ArrayList<Sun>();
+ArrayList<Bullet> bullet = new ArrayList<Bullet>();
 //Create the 2d array to store the location and status of each square on the grid 
 int[][] full = new int[8][3];
 
