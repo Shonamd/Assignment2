@@ -89,6 +89,12 @@ void flowers()
     Eflower temp = eflower.get(i) ;
     temp.erender() ;
   }
+  
+  for(int  i = 0 ; i < sun.size()-1 ; i++)
+  {
+     Sun temp = sun.get(i);
+     temp.srender();
+  }
 
   
   if (add_bflower == true && mouseX >width/10 && mouseY > height/5)
@@ -125,4 +131,13 @@ void flowers()
     energy ++ ;
   }
   
+  if(sun.size()<0)
+  {
+    for(int i=-1 ; i< sun.size()-1; i++)
+    {
+      Sun temp = sun.get(i);
+      temp.srender();
+    }
+  }
+    
 }
