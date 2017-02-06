@@ -33,7 +33,6 @@ void draw()
   //Call the main game
   Game_screen() ;
   flowers() ;
-  
 
 }
   

@@ -3,8 +3,6 @@ class Sun extends Eflower
   Sun (float xpos, float ypos)
   {
     super(xpos, ypos);
-   //this.xpos = xpos;
-    //this.ypos = ypos;
   }
   
   void srender()
@@ -15,5 +13,11 @@ class Sun extends Eflower
     fill(234, 250, 23);
     ellipse(0, -50, 20, 20);
     popMatrix();
+  }
+  
+  void sremove()
+  {
+     energy += 15 ;
+     sun.remove(this);
   }
 }

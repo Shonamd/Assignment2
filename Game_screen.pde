@@ -123,22 +123,22 @@ void flowers()
     tempsun.srender() ;
   }
   
+  for(int i = 0 ; i < sun.size()-1 ; i++)
+  {
+    Sun tempsun = sun.get(i) ;
+    if(frameCount % 80 == 0)
+    {
+      tempsun.sremove();
+    }
+  }
+  
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();
   tempbug.update_bug();
-        
+  
   if(frameCount % 60 == 0)
   {
     energy ++ ;
   }
-  
-  /*if(sun.size()<0)
-  {
-    for(int i=-1 ; i< sun.size()-1; i++)
-    {
-      Sun temp = sun.get(i);
-      temp.srender();
-    }
-  }*/
-    
+
 }
