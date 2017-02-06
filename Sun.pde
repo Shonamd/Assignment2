@@ -17,7 +17,7 @@ class Sun extends Eflower
   
   void sremove()
   {
-     energy += 15 ;
+     energy += 8 ;
      sun.remove(this);
   }
 }

@@ -55,11 +55,13 @@ void Game_screen()
 
 void flowers()
 {
+  //Create icon flowers at the top
   Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
   battleflower1.brender();
   Eflower eflower1 = eflower.get(0);
   eflower1.erender();
   
+  //Buy the flowers using energy
   if (mousePressed == true)
   {
     if (dist(mouseX, mouseY, width/10, height/10) < height/10)
@@ -79,6 +81,7 @@ void flowers()
       }
     }
   }
+  
   
   for(int i = 1 ; i < bflower.size() ; i++)
   {
