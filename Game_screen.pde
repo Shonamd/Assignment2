@@ -84,7 +84,7 @@ void flowers()
     tempflower.brender() ;
   }
   
-  for(int i = 0 ; i < ecount+1 ; i++)
+  for(int  i = 0 ; i < ecount+1 ; i++)
   {
     Eflower temp = eflower.get(i) ;
     temp.erender() ;

@@ -47,7 +47,9 @@ class Eflower
     translate(xpos, ypos) ;
     shape(eflower); 
     popMatrix();
+    sun.add(new Sun(xpos, ypos));
   }
+
 }
 
 class Bflower
