@@ -11,7 +11,6 @@ class Bug
     pos = new PVector();
     pos.x = x;
     midY = y;
-    //pos.y = y ;
     
     bug_create();
   }

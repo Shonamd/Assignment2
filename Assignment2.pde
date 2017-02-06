@@ -1,4 +1,3 @@
-//boolean eflower1, eflower2, eflower3, eflower4, eflower5 = false ;
 int ecount = 0 ;
 void setup()
 {
@@ -41,7 +40,6 @@ void draw()
 {
   
   Game_screen() ;
-  //add_flowers();
   
   Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
   battleflower1.brender();
@@ -104,39 +102,6 @@ void draw()
   tempbug.bug_render();
   tempbug.update_bug();
       
-   
-  /*if(eflower2 == true)
-  {
-      Eflower eflowers = eflower.get(1);
-      eflowers.erender();
-  }
-  
-  if(eflower3 == true)
-  {
-      Eflower eflowers = eflower.get(2);
-      eflowers.erender();
-  }
-  
-  if(eflower4 == true)
-  {
-      Eflower eflowers = eflower.get(3);
-      eflowers.erender();
-  }
-  
-  if(eflower5 == true)
-  {
-      Eflower eflowers = eflower.get(4);
-      eflowers.erender();
-  }
-  
-  
-  
-  Eflower eflower1  = new Eflower(width/10, height/10);
-  eflower1.erender();
-  
-  Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
-  battleflower1.brender();*/
-  
   if(frameCount % 60 == 0)
   {
     energy ++ ;
