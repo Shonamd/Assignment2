@@ -88,8 +88,8 @@ void flowers()
   {
     Eflower temp = eflower.get(i) ;
     temp.erender() ;
+    temp.eupdate() ;
   }
-
   
   if (add_bflower == true && mouseX >width/10 && mouseY > height/5)
   {
@@ -111,10 +111,11 @@ void flowers()
     }
   }
   
-  /*if( frameCount % 600 == 0)
+  for(int i = 0 ; i < sun.size()-1 ; i++)
   {
-    
-  }*/
+    Sun tempsun = sun.get(i) ;
+    tempsun.srender() ;
+  }
   
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();

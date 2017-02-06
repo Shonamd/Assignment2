@@ -47,7 +47,16 @@ class Eflower
     translate(xpos, ypos) ;
     shape(eflower); 
     popMatrix();
-    sun.add(new Sun(xpos, ypos));
+    //sun.add(new Sun(xpos, ypos));
+  }
+  
+  void eupdate()
+  {
+    if( frameCount % 600 == 0)
+    {
+      println("Works");
+      sun.add(new Sun(xpos, ypos)); 
+    }
   }
 
 }
