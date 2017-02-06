@@ -52,11 +52,8 @@ class Eflower
   
   void eupdate()
   {
-    if( frameCount % 600 == 0)
-    {
       println("Works");
       sun.add(new Sun(xpos, ypos)); 
-    }
   }
 
 }

@@ -57,6 +57,8 @@ void flowers()
 {
   Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
   battleflower1.brender();
+  Eflower eflower1 = eflower.get(0);
+  eflower1.erender();
   
   if (mousePressed == true)
   {
@@ -84,11 +86,15 @@ void flowers()
     tempflower.brender() ;
   }
   
-  for(int  i = 0 ; i < ecount+1 ; i++)
+  for(int  i = 1 ; i < ecount+1 ; i++)
   {
     Eflower temp = eflower.get(i) ;
     temp.erender() ;
-    temp.eupdate() ;
+    if( frameCount % 300 == 0)
+    {
+      temp.eupdate();
+    }
+  
   }
   
   if (add_bflower == true && mouseX >width/10 && mouseY > height/5)
