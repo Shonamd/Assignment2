@@ -1,4 +1,5 @@
 int ecount = 0 ;
+int bcount = 0 ;
 boolean kill = false ;
 boolean generate = false ;
 

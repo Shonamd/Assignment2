@@ -3,7 +3,7 @@ int energy = 30;
 boolean add_eflower = false ;
 boolean add_bflower = false ;
 boolean blane = false ;
-boolean bulletfire = false ;
+boolean bulletfire = true ;
 boolean attack = true ;
 boolean start = false;
 
@@ -89,10 +89,15 @@ void flowers()
   }
   
   
-  for(int i = 1 ; i < bflower.size() ; i++)
+  for(int i = 1 ; i < bcount+1 ; i++)
   {
-    Bflower tempflower = bflower.get(i) ;
-    tempflower.brender() ;
+    Bflower temp = bflower.get(i) ;
+    temp.brender() ;
+    
+    if( frameCount % 100 == 0)
+    {
+      temp.bupdate() ;
+    }
    }
     
   
@@ -122,8 +127,10 @@ void flowers()
       if ( mousePressed == true)
       {
          bflower.add( new Bflower((width/10)+(x*width/10) + (width/10* 0.5), (height/5)+(y*height/5) + (height/5*0.5))) ;
+         
          full[x][y] = 1 ;
          add_bflower = false ;
+         bcount ++ ;
          energy = energy - 30 ;
       }
     }
@@ -147,36 +154,18 @@ void flowers()
       {
         temp.bremove();
         blane = false ;
+        lane[y] = 0 ;
       }
-     }
-  
- /* if (blane == true)
-  {
-    Bug temp = bug.get(0) ;
-    temp.bug_render();
-    temp.update_bug();
-    
-    if(frameCount % (25*60) == 0)
-    {
-      temp.bremove();
-      blane = false ;
-    }*/
+     } 
   }
   
   
   //Creates the bullets
- for(int i = 1 ; i < bflower.size() ; i++)
+ for(int i = 0 ; i < bullet.size()-1 ; i++)
  {
-     Bflower tempflower = bflower.get(i) ;
-     tempflower.bupdate();
-      
-     if( attack == true)
-       {
-         Bullet tempbullet = bullet.get(i-1) ;
-         tempbullet.bullet_render();
-         tempbullet.update_bullet();
-       }
-   
+   Bullet tempbullet = bullet.get(i);
+   tempbullet.bullet_render();
+   tempbullet.update_bullet();
  }
  
   //Creates the sun and removes it
