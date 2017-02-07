@@ -60,7 +60,7 @@ void Game_screen()
 void flowers()
 {
   //Create icon flowers at the top
-  Bflower battleflower1 = new Bflower(width/10*3, height/10) ;
+  Bflower battleflower1 = bflower.get(0) ;
   battleflower1.brender();
   Eflower eflower1 = eflower.get(0);
   eflower1.erender();
@@ -87,18 +87,18 @@ void flowers()
   }
   
   
-  for(int i = 0 ; i < bflower.size()-1 ; i++)
+  for(int i = 1 ; i < bflower.size() ; i++)
   {
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
     
-    if( (keyCode == 'b' || keyCode == 'B') )
+   /* if( lane1 == false )
     {
       tempflower.bupdate();
       Bullet tempbullet = bullet.get(i) ;
       tempbullet.bullet_render();
       tempbullet.update_bullet();
-    }
+    }*/
       
     /*for(i = 0 ; i < bullet.size()-1 ; i++)
     {
@@ -141,7 +141,22 @@ void flowers()
     }
   }
   
-  for(int i = 0 ; i < sun.size()-1 ; i++)
+ for(int i = 1 ; i < bflower.size() ; i++)
+ {
+   println("works1");
+   Bflower tempflower = bflower.get(i) ;
+   
+   if (lane1 == false)
+   {
+     println("works2");
+     tempflower.bupdate();
+     Bullet tempbullet = bullet.get(i-1) ;
+     tempbullet.bullet_render();
+     tempbullet.update_bullet();
+   }
+ }
+  
+ for(int i = 0 ; i < sun.size()-1 ; i++)
   {
     Sun tempsun = sun.get(i) ;
     tempsun.srender() ;
