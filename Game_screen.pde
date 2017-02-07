@@ -91,21 +91,6 @@ void flowers()
   {
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
-    
-   /* if( lane1 == false )
-    {
-      tempflower.bupdate();
-      Bullet tempbullet = bullet.get(i) ;
-      tempbullet.bullet_render();
-      tempbullet.update_bullet();
-    }*/
-      
-    /*for(i = 0 ; i < bullet.size()-1 ; i++)
-    {
-      Bullet tempbullet = bullet.get(i) ;
-      tempbullet.bullet_render();
-      tempbullet.update_bullet();
-     }*/
    }
     
   
@@ -121,6 +106,7 @@ void flowers()
   
   }
   
+  //Adds the flowers to the 2d array
   if (add_bflower == true && mouseX >width/10 && mouseY > height/5)
   {
     int x = (mouseX - (width/10))/(width/10) ;
@@ -141,21 +127,21 @@ void flowers()
     }
   }
   
+  //Creates the bullets
  for(int i = 1 ; i < bflower.size() ; i++)
  {
-   println("works1");
    Bflower tempflower = bflower.get(i) ;
    
    if (lane1 == false)
    {
-     println("works2");
      tempflower.bupdate();
      Bullet tempbullet = bullet.get(i-1) ;
      tempbullet.bullet_render();
      tempbullet.update_bullet();
    }
  }
-  
+ 
+  //Creates the sun and removes it
  for(int i = 0 ; i < sun.size()-1 ; i++)
   {
     Sun tempsun = sun.get(i) ;
@@ -167,11 +153,12 @@ void flowers()
     }
   }
   
-  
-  Bug tempbug = bug.get(0) ;
+  //Gets the bug
+  Bug tempbug = bug.get(2) ;
   tempbug.bug_render();
   tempbug.update_bug();
   
+  //Generates energy if you have no flowers
   if(frameCount % 60 == 0)
   {
     energy ++ ;

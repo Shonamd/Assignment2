@@ -16,6 +16,8 @@ void setup()
   bflower.add(new Bflower(width/10*3, height/10));
   //Practice bug
   bug.add(new Bug(width, height/2));
+  bug.add(new Bug(width, height/10*3));
+  bug.add(new Bug(width, height/10*7));
   
 }
 //Create the arraylists
