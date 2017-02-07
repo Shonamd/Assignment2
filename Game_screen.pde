@@ -167,6 +167,20 @@ void flowers()
     }
   }
     
+  if(lane2 == true)
+  {
+    bug.add(new Bug(width, height/2));
+    Bug temp = bug.get(0);    
+    temp.bug_render() ;
+    temp.update_bug() ;
+    
+    if(frameCount % (28*60) == 0)
+    {
+      temp.bremove();
+      lane2 = false ;
+    }
+  }
+    
   
   //Creates the bullets
  /*for(int i = 1 ; i < bflower.size() ; i++)
