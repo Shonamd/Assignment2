@@ -101,6 +101,7 @@ class Bflower
     translate(xpos, ypos) ;
     shape(battleflower); 
     popMatrix();
+    
   }
   
   void bupdate()

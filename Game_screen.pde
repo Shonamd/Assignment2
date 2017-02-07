@@ -90,12 +90,18 @@ void flowers()
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
     
-    if(keyCode == 'b' || keyCode == 'B')
-    {
-      tempflower.bupdate();
-      println("works");
+     if(keyCode == 'b' || keyCode == 'B')
+     {
+        tempflower.bupdate();
+    
+        for(i = 0 ; i < bullet.size()-1 ; i++)
+        {
+          Bullet tempbullet = bullet.get(i) ;
+          tempbullet.bullet_render();
+          tempbullet.update_bullet();
+        }
+      }
     }
-  }
   
   for(int  i = 1 ; i < ecount+1 ; i++)
   {
@@ -140,13 +146,6 @@ void flowers()
     }
   }
   
-  
-  
-  /*for(int i = 0 ; i < bullet.size()-1 ; i++)
-  {
-    Bullet tempbullet = bullet.get(i) ;
-    tempbullet.update_bullets();
-  }*/
   
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();
