@@ -17,10 +17,6 @@ void setup()
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   //Add the symbol for the flower that fires projectiles
   bflower.add(new Bflower(width/10*3, height/10));
-  //Add the bugs
-  //bug.add(new Bug(width, height/2));
-  //bug.add(new Bug(width, height/10*3));
-  //bug.add(new Bug(width, height/10*7));
   
 }
 //Create the arraylists

@@ -136,9 +136,21 @@ void flowers()
     bug.add( new Bug(width, (height/5)+(y*height/5) + (height/5*.5)));
     lane[y] = 1 ;
     blane = true ;
-  }
+    
+    if (blane == true)
+    {
+      Bug temp = bug.get(0) ;
+      temp.bug_render();
+      temp.update_bug();
+    
+      if(frameCount % (25*60) == 0)
+      {
+        temp.bremove();
+        blane = false ;
+      }
+     }
   
-  if (blane == true)
+ /* if (blane == true)
   {
     Bug temp = bug.get(0) ;
     temp.bug_render();
@@ -148,96 +160,24 @@ void flowers()
     {
       temp.bremove();
       blane = false ;
-    }
+    }*/
   }
   
-
-  
-/*  //Adds the bug to the array
-  if( attack == true)
-  {
-    float r = random(1, 4);
-    println(r);
-    if (r < 2)
-    {
-      println("Works1");
-      lane1 = true ;
-    }
-     
-    if(r > 2 && r < 3)
-    {
-      println("Works2");
-      lane2 = true ;
-    }
-    
-    if(r > 3)
-    {
-      println("Works3");
-      lane3 = true ;
-    }
-    
-    attack = false;
-  }
-  
-  if(lane1 == true)
-  {
-    bug.add(new Bug(width, height/10*3));
-    Bug temp = bug.get(0);    temp.bug_render() ;
-    temp.update_bug() ;
-    
-    if(frameCount % (28*60) == 0)
-    {
-      println("Lane1");
-      lane1 = false ;
-      temp.bremove();
-      attack = true ;
-    }
-  }
-    
-  if(lane2 == true)
-  {
-    println("Lane2");
-    bug.add(new Bug(width, height/2));
-    Bug temp = bug.get(0);    
-    temp.bug_render() ;
-    temp.update_bug() ;
-    
-    if(frameCount % (28*60) == 0)
-    {
-      lane2 = false ;
-      temp.bremove();
-      attack = true ;
-    }
-  }
-  
-  if(lane3 == true)
-  {
-    println("Lane3");
-    bug.add(new Bug(width, height/10*7));
-    Bug temp = bug.get(0);    
-    temp.bug_render() ;
-    temp.update_bug() ;
-    
-    if(frameCount % (28*60) == 0)
-    {
-      lane3 = false ;
-      temp.bremove();
-      attack = true ;
-    }
-  }*/
-    
   
   //Creates the bullets
- /*for(int i = 1 ; i < bflower.size() ; i++)
+ for(int i = 1 ; i < bflower.size() ; i++)
  {
-   Bflower tempflower = bflower.get(i) ;
-   
+     Bflower tempflower = bflower.get(i) ;
      tempflower.bupdate();
-     Bullet tempbullet = bullet.get(i-1) ;
-     tempbullet.bullet_render();
-     tempbullet.update_bullet();
+      
+     if( attack == true)
+       {
+         Bullet tempbullet = bullet.get(i-1) ;
+         tempbullet.bullet_render();
+         tempbullet.update_bullet();
+       }
    
- }*/
+ }
  
   //Creates the sun and removes it
  for(int i = 0 ; i < sun.size()-1 ; i++)
@@ -257,64 +197,4 @@ void flowers()
     energy ++ ;
   }
   
-  /*if (attack == true)
-  {
-    int i = int(random(1, 4));
-    println(i);
-    bug.add(new Bug(width, (height/5*1.5*i)+(height/5)));
-    start = true ;
-    attack = false ;
-    println("Worked1");
-    
-    if( start == true)
-  {
-    //attack() ;
-    println("Worked2");
-    Bug temp = bug.get(0);
-    temp.bug_render();
-    temp.update_bug();
-    println("Worked3");
-  
-    if(frameCount % (200) == 0)
-    {
-      println("Worked4");
-      temp.bremove() ;
-      attack = true ;
-    }
-  }
-    
-  }
-  
-  if( start == true)
-  {
-    //attack() ;
-    println("Worked2");
-    Bug temp = bug.get(0);
-    temp.bug_render();
-    temp.update_bug();
-    println("Worked3");
-  
-    if(frameCount % (200) == 0)
-    {
-      println("Worked4");
-      temp.bremove() ;
-      attack = true ;
-    }
-  }*/
-
 }
-
-/*void attack()
-{
-  Bug temp = bug.get(0);
-  temp.bug_render();
-  temp.update_bug();
-  println("Worked3");
-  
-  if(frameCount % (28*60)== 0)
-  {
-    println("Worked4");
-    temp.bremove() ;
-    attack = true ;
-  }
-}*/
