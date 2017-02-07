@@ -23,7 +23,12 @@ class Bullet extends Bflower
   
   void update_bullet()
   {
-    pos.x = pos.x + 50 ;
+    pos.x = pos.x + 5 ;
+    
+    if(pos.x > width/4*3)
+    {
+      bullet.remove(this) ;
+    }
   }
   
 }

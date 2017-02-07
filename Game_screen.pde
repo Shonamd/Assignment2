@@ -2,6 +2,8 @@ int score = 0 ;
 int energy = 30;
 boolean add_eflower = false ;
 boolean add_bflower = false ;
+boolean lane1, lane2, lane3, lane4 = false ;
+boolean bulletfire = false ;
 
 void Game_screen()
 { 
@@ -85,23 +87,27 @@ void flowers()
   }
   
   
-  for(int i = 1 ; i < bflower.size() ; i++)
+  for(int i = 0 ; i < bflower.size()-1 ; i++)
   {
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
     
-     if(keyCode == 'b' || keyCode == 'B')
-     {
-        tempflower.bupdate();
-    
-        for(i = 0 ; i < bullet.size()-1 ; i++)
-        {
-          Bullet tempbullet = bullet.get(i) ;
-          tempbullet.bullet_render();
-          tempbullet.update_bullet();
-        }
-      }
+    if( (keyCode == 'b' || keyCode == 'B') )
+    {
+      tempflower.bupdate();
+      Bullet tempbullet = bullet.get(i) ;
+      tempbullet.bullet_render();
+      tempbullet.update_bullet();
     }
+      
+    /*for(i = 0 ; i < bullet.size()-1 ; i++)
+    {
+      Bullet tempbullet = bullet.get(i) ;
+      tempbullet.bullet_render();
+      tempbullet.update_bullet();
+     }*/
+   }
+    
   
   for(int  i = 1 ; i < ecount+1 ; i++)
   {
