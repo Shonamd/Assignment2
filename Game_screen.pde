@@ -2,9 +2,10 @@ int score = 0 ;
 int energy = 30;
 boolean add_eflower = false ;
 boolean add_bflower = false ;
-boolean lane1, lane2, lane3 = false ;
+boolean blane = false ;
 boolean bulletfire = false ;
 boolean attack = true ;
+boolean start = false;
 
 void Game_screen()
 { 
@@ -128,7 +129,31 @@ void flowers()
     }
   }
   
-  //Adds the bug to the array
+  if( attack == true)
+  {
+    int y = int(random(3)) ;
+    
+    bug.add( new Bug(width, (height/5)+(y*height/5) + (height/5*.5)));
+    lane[y] = 1 ;
+    blane = true ;
+  }
+  
+  if (blane == true)
+  {
+    Bug temp = bug.get(0) ;
+    temp.bug_render();
+    temp.update_bug();
+    
+    if(frameCount % (25*60) == 0)
+    {
+      temp.bremove();
+      blane = false ;
+    }
+  }
+  
+
+  
+/*  //Adds the bug to the array
   if( attack == true)
   {
     float r = random(1, 4);
@@ -162,13 +187,16 @@ void flowers()
     
     if(frameCount % (28*60) == 0)
     {
-      temp.bremove();
+      println("Lane1");
       lane1 = false ;
+      temp.bremove();
+      attack = true ;
     }
   }
     
   if(lane2 == true)
   {
+    println("Lane2");
     bug.add(new Bug(width, height/2));
     Bug temp = bug.get(0);    
     temp.bug_render() ;
@@ -176,10 +204,27 @@ void flowers()
     
     if(frameCount % (28*60) == 0)
     {
-      temp.bremove();
       lane2 = false ;
+      temp.bremove();
+      attack = true ;
     }
   }
+  
+  if(lane3 == true)
+  {
+    println("Lane3");
+    bug.add(new Bug(width, height/10*7));
+    Bug temp = bug.get(0);    
+    temp.bug_render() ;
+    temp.update_bug() ;
+    
+    if(frameCount % (28*60) == 0)
+    {
+      lane3 = false ;
+      temp.bremove();
+      attack = true ;
+    }
+  }*/
     
   
   //Creates the bullets
@@ -211,5 +256,65 @@ void flowers()
   {
     energy ++ ;
   }
+  
+  /*if (attack == true)
+  {
+    int i = int(random(1, 4));
+    println(i);
+    bug.add(new Bug(width, (height/5*1.5*i)+(height/5)));
+    start = true ;
+    attack = false ;
+    println("Worked1");
+    
+    if( start == true)
+  {
+    //attack() ;
+    println("Worked2");
+    Bug temp = bug.get(0);
+    temp.bug_render();
+    temp.update_bug();
+    println("Worked3");
+  
+    if(frameCount % (200) == 0)
+    {
+      println("Worked4");
+      temp.bremove() ;
+      attack = true ;
+    }
+  }
+    
+  }
+  
+  if( start == true)
+  {
+    //attack() ;
+    println("Worked2");
+    Bug temp = bug.get(0);
+    temp.bug_render();
+    temp.update_bug();
+    println("Worked3");
+  
+    if(frameCount % (200) == 0)
+    {
+      println("Worked4");
+      temp.bremove() ;
+      attack = true ;
+    }
+  }*/
 
 }
+
+/*void attack()
+{
+  Bug temp = bug.get(0);
+  temp.bug_render();
+  temp.update_bug();
+  println("Worked3");
+  
+  if(frameCount % (28*60)== 0)
+  {
+    println("Worked4");
+    temp.bremove() ;
+    attack = true ;
+  }
+}*/

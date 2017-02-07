@@ -31,7 +31,7 @@ ArrayList<Sun> sun = new ArrayList<Sun>();
 ArrayList<Bullet> bullet = new ArrayList<Bullet>();
 //Create the 2d array to store the location and status of each square on the grid 
 int[][] full = new int[8][3];
-//int[] lane = new int[3] ;
+int[] lane = new int[3] ;
 
 PFont maint ;
 PFont tscore ; 
