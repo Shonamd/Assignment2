@@ -20,6 +20,8 @@ void Game_screen()
     ellipse(wsize*2*i , hsize*4.8, wsize, wsize/2);
   }
   //Creates the grid
+  stroke(0);
+  strokeWeight(2);
   for(int j=1 ; j<9 ; j ++)
   {
     for (int i=1 ; i<4 ; i++)
@@ -87,6 +89,12 @@ void flowers()
   {
     Bflower tempflower = bflower.get(i) ;
     tempflower.brender() ;
+    
+    if(keyCode == 'b' || keyCode == 'B')
+    {
+      tempflower.bupdate();
+      println("works");
+    }
   }
   
   for(int  i = 1 ; i < ecount+1 ; i++)
@@ -134,11 +142,11 @@ void flowers()
   
   
   
-  for(int i = 0 ; i < bullet.size()-1 ; i++)
+  /*for(int i = 0 ; i < bullet.size()-1 ; i++)
   {
     Bullet tempbullet = bullet.get(i) ;
     tempbullet.update_bullets();
-  }
+  }*/
   
   Bug tempbug = bug.get(0) ;
   tempbug.bug_render();

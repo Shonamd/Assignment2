@@ -8,23 +8,23 @@ class Bullet extends Bflower
   {
     super(xpos, ypos) ;
     pos = new PVector(xpos, ypos) ;
-    create_bullets();
+    bullet_render();
   }
   
-  void create_bullets()
+  void bullet_render()
   {
     pushMatrix();
     translate(pos.x, pos.y);
-    fill(250, 13, 48);
-    strokeWeight(1.5);
-    stroke(0);
+    strokeWeight(5);
+    stroke(250, 13, 48);
+    line(-4, 0, 4, 0);
     popMatrix();
   }
   
-  void update_bullets()
+ /* void update_bullets()
   {
     pos.x = pos.x + 2 ;
-  }
+  }*/
 }
 
 void keyPressed()
