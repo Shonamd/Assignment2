@@ -1,6 +1,6 @@
 class Bug
 {
-  PShape bug ;
+  PShape bugs ;
   PVector pos;
   float midY;
   float theta;
@@ -16,7 +16,7 @@ class Bug
   
   void bug_create()
   {
-    bug = createShape(GROUP);
+    bugs = createShape(GROUP);
     strokeWeight(2) ;
     stroke(0);
     fill(180, 78, 31) ;
@@ -30,15 +30,15 @@ class Bug
     PShape leg6 = createShape(LINE,0, 0, height/30, width/40);
     PShape main = createShape(ELLIPSE, 0, 0, height/10, width/30) ;
     
-    bug.addChild(antena1);
-    bug.addChild(antena2);
-    bug.addChild(leg1);
-    bug.addChild(leg2);
-    bug.addChild(leg3);
-    bug.addChild(leg4);
-    bug.addChild(leg5);
-    bug.addChild(leg6);
-    bug.addChild(main);
+    bugs.addChild(antena1);
+    bugs.addChild(antena2);
+    bugs.addChild(leg1);
+    bugs.addChild(leg2);
+    bugs.addChild(leg3);
+    bugs.addChild(leg4);
+    bugs.addChild(leg5);
+    bugs.addChild(leg6);
+    bugs.addChild(main);
     
   }
   
@@ -46,7 +46,7 @@ class Bug
   {
     pushMatrix();
     translate(pos.x, pos.y);
-    shape(bug);
+    shape(bugs);
     popMatrix();
   }
   
@@ -57,11 +57,10 @@ class Bug
     pos.x = pos.x - 0.5;
     pos.y = midY + sin(theta) * ((height/5)*0.25);
     
-    //////////////////
-    if(pos.x < 0)
-    {
-      pos.x = width;
-    }
-    ////////////////
+  }
+  
+  void bremove()
+  {
+    bug.remove(this);
   }
 }

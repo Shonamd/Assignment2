@@ -2,8 +2,9 @@ int score = 0 ;
 int energy = 30;
 boolean add_eflower = false ;
 boolean add_bflower = false ;
-boolean lane1, lane2, lane3, lane4 = false ;
+boolean lane1, lane2, lane3 = false ;
 boolean bulletfire = false ;
+boolean attack = true ;
 
 void Game_screen()
 { 
@@ -127,19 +128,57 @@ void flowers()
     }
   }
   
+  //Adds the bug to the array
+  if( attack == true)
+  {
+    float r = random(1, 4);
+    println(r);
+    if (r < 2)
+    {
+      println("Works1");
+      lane1 = true ;
+    }
+     
+    if(r > 2 && r < 3)
+    {
+      println("Works2");
+      lane2 = true ;
+    }
+    
+    if(r > 3)
+    {
+      println("Works3");
+      lane3 = true ;
+    }
+    
+    attack = false;
+  }
+  
+  if(lane1 == true)
+  {
+    bug.add(new Bug(width, height/10*3));
+    Bug temp = bug.get(0);    temp.bug_render() ;
+    temp.update_bug() ;
+    
+    if(frameCount % (28*60) == 0)
+    {
+      temp.bremove();
+      lane1 = false ;
+    }
+  }
+    
+  
   //Creates the bullets
- for(int i = 1 ; i < bflower.size() ; i++)
+ /*for(int i = 1 ; i < bflower.size() ; i++)
  {
    Bflower tempflower = bflower.get(i) ;
    
-   if (lane1 == false)
-   {
      tempflower.bupdate();
      Bullet tempbullet = bullet.get(i-1) ;
      tempbullet.bullet_render();
      tempbullet.update_bullet();
-   }
- }
+   
+ }*/
  
   //Creates the sun and removes it
  for(int i = 0 ; i < sun.size()-1 ; i++)
@@ -152,11 +191,6 @@ void flowers()
       tempsun.sremove();
     }
   }
-  
-  //Gets the bug
-  Bug tempbug = bug.get(2) ;
-  tempbug.bug_render();
-  tempbug.update_bug();
   
   //Generates energy if you have no flowers
   if(frameCount % 60 == 0)

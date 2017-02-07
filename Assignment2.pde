@@ -1,4 +1,7 @@
 int ecount = 0 ;
+boolean kill = false ;
+boolean generate = false ;
+
 void setup()
 {
   size(900, 600);
@@ -14,10 +17,10 @@ void setup()
   eflower.add(new Eflower(width/10*2*4 , height/5*4.5));
   //Add the symbol for the flower that fires projectiles
   bflower.add(new Bflower(width/10*3, height/10));
-  //Practice bug
-  bug.add(new Bug(width, height/2));
-  bug.add(new Bug(width, height/10*3));
-  bug.add(new Bug(width, height/10*7));
+  //Add the bugs
+  //bug.add(new Bug(width, height/2));
+  //bug.add(new Bug(width, height/10*3));
+  //bug.add(new Bug(width, height/10*7));
   
 }
 //Create the arraylists
@@ -28,6 +31,7 @@ ArrayList<Sun> sun = new ArrayList<Sun>();
 ArrayList<Bullet> bullet = new ArrayList<Bullet>();
 //Create the 2d array to store the location and status of each square on the grid 
 int[][] full = new int[8][3];
+//int[] lane = new int[3] ;
 
 PFont maint ;
 PFont tscore ; 
@@ -38,6 +42,5 @@ void draw()
   //Call the main game
   Game_screen() ;
   flowers() ;
-
-}
+ }
   
