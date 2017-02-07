@@ -94,9 +94,15 @@ void flowers()
     Bflower temp = bflower.get(i) ;
     temp.brender() ;
     
-    if( frameCount % 100 == 0)
+    for(i = 0 ; i < 3 ; i++)
     {
-      temp.bupdate() ;
+      if(lane[i] == 1)
+      {
+        if( frameCount % 60 == 0)
+        {
+          temp.bupdate() ;
+        }
+      }
     }
    }
     
