@@ -168,11 +168,10 @@ void flowers()
       temp.bug_render();
       temp.update_bug();
     
-      if(frameCount % (25*60) == 0)
+      if(frameCount % (28*60) == 0)
       {
-        temp.bremove();
-        blane = false ;
-        lane[y] = 0 ;
+          temp.bremove();
+          over = true ;
       }
       
       if( kcount == 3)

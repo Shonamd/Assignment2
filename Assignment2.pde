@@ -2,9 +2,9 @@ int ecount = 0 ;
 int bcount = 0 ;
 int kcount = 0 ;
 int level = 0 ;
-boolean kill = false ;
 boolean game = false ;
 boolean gstart = true ;
+boolean over = false ;
 
 void setup()
 {
@@ -32,7 +32,6 @@ ArrayList<Bullet> bullet = new ArrayList<Bullet>();
 //Create the 2d array to store the location and status of each square on the grid 
 int[][] full = new int[8][3];
 int[] lane = new int[3] ;
-int p = 0 ;
 
 PFont maint ;
 PFont tscore ; 
@@ -53,6 +52,12 @@ void draw()
   }
   
   if( level == 3)
+  {
+    game = false ;
+    background(0);
+  }
+  
+  if( over == true)
   {
     game = false ;
     background(0);

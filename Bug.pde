@@ -18,7 +18,7 @@ class Bug
   {
     bugs = createShape(GROUP);
     strokeWeight(2) ;
-    stroke(0);
+    stroke(67, 65, 65);
     fill(180, 78, 31) ;
     PShape antena1 = createShape(LINE, 0, 0, (-height/10),(-width/100)) ; 
     PShape antena2 = createShape(LINE, 0, 0, (-height/10), (width/100)); 
