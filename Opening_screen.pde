@@ -7,7 +7,7 @@ void opening()
   rect(width/20, height/20, width/20*18, height/20*18);
   textFont(tscore);
   fill(34, 237, 17);
-  text("Stop bugging me", width/20*6, height/20*8);
+  text("Stop Bugging Me!", width/20*7.5, height/20*8);
   
   noFill();
   rect(width/20*8, height/20*12, width/5, height/8);
