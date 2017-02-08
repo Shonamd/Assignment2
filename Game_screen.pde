@@ -15,17 +15,17 @@ void Game_screen()
   float wsize = width/10 ;
   float hsize = height/5 ;
   
-  if( score > 90)
+  if( score >= 90)
   {
     level = 1 ;
   }
   
-  if( score > 180 )
+  if( score >= 180 )
   {
     level = 2 ;
   }
   
-  if( score > 290)
+  if( score >= 290)
   {
     level = 3 ;
   }
@@ -87,10 +87,13 @@ void flowers()
   {
     if (dist(mouseX, mouseY, width/10, height/10) < height/10)
     {
-      if(energy > 20)
+      if(ecount < 4 )
       {
-        ecount ++ ;
-        energy = energy- 20 ;
+        if(energy > 20)
+        {
+          ecount ++ ;
+          energy = energy- 20 ;
+        }
       }
     }
     
@@ -167,12 +170,6 @@ void flowers()
       Bug temp = bug.get(0) ;
       temp.bug_render();
       temp.update_bug();
-    
-      if(frameCount % (28*60) == 0)
-      {
-          temp.bremove();
-          over = true ;
-      }
       
       if( kcount == 3)
       {

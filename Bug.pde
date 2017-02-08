@@ -52,6 +52,11 @@ class Bug
   
   void update_bug()
   {
+    if(pos.x == 0)
+    {
+      over = true ;
+    }
+      
     if ( level == 0)
     {
       //Makes the bug attack in a sin wave pattern
@@ -63,14 +68,14 @@ class Bug
     if( level == 1)
     {
       theta = theta + radians(0.5);
-      pos.x = pos.x - 3;
+      pos.x = pos.x - 1;
       pos.y = midY + sin(theta) * ((height/5)*0.3);
     }
     
      if( level == 2)
     {
       theta = theta + radians(0.5);
-      pos.x = pos.x - 5;
+      pos.x = pos.x - 2.5;
       pos.y = midY + sin(theta) * ((height/5)*0.3);
     }
     

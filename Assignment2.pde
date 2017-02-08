@@ -55,12 +55,27 @@ void draw()
   {
     game = false ;
     background(0);
+    stroke(34, 237, 17);
+    noFill();
+    rect(width/20, height/20, width/20*18, height/20*18);
+    textFont(tscore);
+    fill(34, 237, 17);
+    text("Congratulations! You win with a score of ", width/20*5, height/20*8);
+    text(score, width/2, height/20*10);
   }
   
   if( over == true)
   {
     game = false ;
     background(0);
+    strokeWeight(2);
+    stroke(34, 237, 17);
+    noFill();
+    rect(width/20, height/20, width/20*18, height/20*18);
+    textFont(tscore);
+    fill(34, 237, 17);
+    text(score, width/2, height/20*8);
+    text("Good Effort!", width/20*8.5, height/20*12);
   }
   
  }
