@@ -94,17 +94,14 @@ void flowers()
     Bflower temp = bflower.get(i) ;
     temp.brender() ;
     
-    for(i = 0 ; i < 3 ; i++)
+    if( frameCount % 60 == 0)
     {
-      if(lane[i] == 1)
-      {
-        if( frameCount % 60 == 0)
-        {
-          temp.bupdate() ;
-        }
-      }
-    }
+      temp.bupdate() ;
+     }
    }
+
+    
+ 
     
   
   for(int  i = 1 ; i < ecount+1 ; i++)
@@ -156,8 +153,7 @@ void flowers()
       temp.bug_render();
       temp.update_bug();
     
-     // if(kcount == 3)
-     if( frameCount % (25*60) == 0)
+      if(frameCount % (25*60) == 0)
       {
         temp.bremove();
         blane = false ;
@@ -167,13 +163,12 @@ void flowers()
   }
   
   
-  //Creates the bullets 
+  //Creates the bullets
  for(int i = 0 ; i < bullet.size()-1 ; i++)
  {
    Bullet tempbullet = bullet.get(i);
    tempbullet.bullet_render();
    tempbullet.update_bullet();
-  
  }
  
   //Creates the sun and removes it

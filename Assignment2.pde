@@ -1,7 +1,7 @@
 int ecount = 0 ;
 int bcount = 0 ;
 int kcount = 0 ;
-boolean generate = false ;
+boolean kill = false ;
 
 void setup()
 {
