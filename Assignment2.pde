@@ -3,6 +3,7 @@ int bcount = 0 ;
 int kcount = 0 ;
 int level = 0 ;
 boolean game = false ;
+boolean instruct = false ;
 boolean gstart = true ;
 boolean over = false ;
 
@@ -42,6 +43,11 @@ void draw()
   if( gstart == true)
   {
     opening();
+  }
+  
+  if( instruct == true)
+  {
+    instruct() ;
   }
   
   if( game == true)
