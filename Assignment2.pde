@@ -1,7 +1,9 @@
 int ecount = 0 ;
 int bcount = 0 ;
 int kcount = 0 ;
+int level = 0 ;
 boolean kill = false ;
+boolean game = false ;
 
 void setup()
 {
@@ -36,8 +38,18 @@ PFont tscore ;
 //First flower code
 void draw()
 {
-  //Call the main game
-  Game_screen() ;
-  flowers() ;
+  if( game == false)
+  {
+    //Call the main game
+    Game_screen() ;
+    flowers() ;
+  }
+  
+  if( level == 3)
+  {
+    game = true ;
+    background(0);
+  }
+  
  }
   

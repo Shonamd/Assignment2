@@ -15,6 +15,21 @@ void Game_screen()
   float wsize = width/10 ;
   float hsize = height/5 ;
   
+  if( score > 90)
+  {
+    level = 1 ;
+  }
+  
+  if( score > 180 )
+  {
+    level = 2 ;
+  }
+  
+  if( score > 290)
+  {
+    level = 3 ;
+  }
+  
   int c = 1;
   
   //Creates the spotlights for the energy flowers
@@ -158,6 +173,14 @@ void flowers()
         temp.bremove();
         blane = false ;
         lane[y] = 0 ;
+      }
+      
+      if( kcount == 3)
+      {
+        temp.bremove();
+        blane = false ;
+        lane[y] = 0 ;
+        kcount = 0 ;
       }
      } 
   }
