@@ -9,3 +9,5 @@ When the game starts, a bug will appear at random in one of the 3 lanes and will
 If the bug manages to reach the end of the lane without being hit 3 times, the game will end and you will be shown the score you managed to achieve.
 
 The game uses inheritance twice, to create the bullets for the pink flower which will use its co-ordinates to appear beside its specific flower before firing. Thee orange flower also uses inheritance to produce a tiny sun every 5 seconds that will increase energy. I'm very pleased with this as it really helped better my unserstandng of inheritance. I am also happey with the bug moving in a sin wave as it makes the game slightly more challanging.
+
+[![Video](http://img.youtube.com/vi/GVYA-0AzRaE/0.jpg)](http://www.youtube.com/watch?v=GVYA-0AzRaE)
