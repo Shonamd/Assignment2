@@ -4,6 +4,7 @@ int kcount = 0 ;
 int level = 0 ;
 boolean kill = false ;
 boolean game = false ;
+boolean gstart = true ;
 
 void setup()
 {
@@ -31,6 +32,7 @@ ArrayList<Bullet> bullet = new ArrayList<Bullet>();
 //Create the 2d array to store the location and status of each square on the grid 
 int[][] full = new int[8][3];
 int[] lane = new int[3] ;
+int p = 0 ;
 
 PFont maint ;
 PFont tscore ; 
@@ -38,7 +40,12 @@ PFont tscore ;
 //First flower code
 void draw()
 {
-  if( game == false)
+  if( gstart == true)
+  {
+    opening();
+  }
+  
+  if( game == true)
   {
     //Call the main game
     Game_screen() ;
@@ -47,7 +54,7 @@ void draw()
   
   if( level == 3)
   {
-    game = true ;
+    game = false ;
     background(0);
   }
   
