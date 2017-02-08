@@ -25,6 +25,16 @@ class Bullet extends Bflower
   {
     pos.x = pos.x + 5 ;
     
+    Bug bugs = bug.get(0);
+    
+    if(dist(pos.x, pos.y, bugs.pos.x, bugs.pos.y) < height/10)
+    {
+      println(kcount);
+      bullet.remove(this);
+      kcount ++ ;
+      score = score + 5 ;
+    }
+    
     if(pos.x > width/4*3)
     {
       bullet.remove(this) ;

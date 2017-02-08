@@ -156,7 +156,8 @@ void flowers()
       temp.bug_render();
       temp.update_bug();
     
-      if(frameCount % (25*60) == 0)
+     // if(kcount == 3)
+     if( frameCount % (25*60) == 0)
       {
         temp.bremove();
         blane = false ;
@@ -166,12 +167,13 @@ void flowers()
   }
   
   
-  //Creates the bullets
+  //Creates the bullets 
  for(int i = 0 ; i < bullet.size()-1 ; i++)
  {
    Bullet tempbullet = bullet.get(i);
    tempbullet.bullet_render();
    tempbullet.update_bullet();
+  
  }
  
   //Creates the sun and removes it
