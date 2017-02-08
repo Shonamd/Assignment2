@@ -9,7 +9,8 @@ void instruct()
   text("Protect the house from the bugs!", width/18, height/25*3);
   text("Buy the energy flowers to get more energy for 20", width/18, height/25*6);
   text("Buy the pink flowers to fire at the bugs for 30", width/18, height/25*9);
-  text("Good luck!", width/16, height/25*12);
+  text("If you're having trouble with the amount of enregy, hold the 'f' key", width/18, height/25*12);
+  text("Good luck!", width/16, height/25*15);
   
   noFill();
   rect(width/20*8, height/20*12, width/5, height/8);

@@ -89,7 +89,7 @@ void flowers()
     {
       if(ecount < 4 )
       {
-        if(energy > 20)
+        if(energy >= 20)
         {
           ecount ++ ;
           energy = energy- 20 ;
@@ -99,7 +99,7 @@ void flowers()
     
     if (dist(mouseX, mouseY, width/10*3, height/10) < height/10)
     {
-      if(energy > 30)
+      if(energy >= 30)
       {
         add_bflower = true ;
       }
